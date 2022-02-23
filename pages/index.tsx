@@ -1,10 +1,17 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Landing from '../components/Landing'
+import NavBar from '../components/NavBar'
 import styles from '../styles/Home.module.css'
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/skills/Skills";
+import Projects from '../components/projects/Projects'
+import { EnvContext } from '../context';
+const Home = (props: any) => {
 
-const Home: NextPage = () => {
   return (
+    <EnvContext.Provider value={{projectId:props.projectId,dataset:props.dataset}}>
+
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -12,45 +19,21 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main className='main '>
+     <div className="relative w-full bg-[url('../assets/img/bg-hero.jpg')] bg-cover">
+       <div className="bg-center bg-cover bg-no-repeat absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to">
+    </div>
+    <div className='relative z-50'>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+     <NavBar/> 
+     <Landing/>
+    </div>
+     </div>
+     <div>
+        <AboutMe />
+        <Skills />
+      <Projects projects={props.projects?props.projects:[]}/>
+      </div>
       </main>
 
       <footer className={styles.footer}>
@@ -58,7 +41,7 @@ const Home: NextPage = () => {
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -66,7 +49,25 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
+</EnvContext.Provider>
   )
 }
 
 export default Home
+
+export const getServerSideProps=async()=>{
+   const query = encodeURIComponent(`*[_type=="project"]`);
+   const projectId = process.env.PROJECT_ID;
+  const dataset = process.env.PROJECT_DATASET;
+  const url = `https://${projectId}.api.sanity.io/v1/data/query/${dataset}?query=${query}`;
+  const resp = await fetch(url).then((res) => res.json());
+  console.log("server response:",resp)
+  return {
+    props:{
+      projects:resp.result,
+      projectId,
+      dataset
+    }
+  }
+  
+}
