@@ -31,7 +31,7 @@ const Home = (props: any) => {
      </div>
      <div>
         <AboutMe />
-        <Skills />
+        <Skills skills={props.skills}/>
       <Projects projects={props.projects?props.projects:[]}/>
       </div>
       </main>
@@ -56,15 +56,22 @@ const Home = (props: any) => {
 export default Home
 
 export const getServerSideProps=async()=>{
-   const query = encodeURIComponent(`*[_type=="project"]`);
+   const query = encodeURIComponent(`*[_type=="project"]`)
+  //  const query = encodeURIComponent(`*`)
    const projectId = process.env.PROJECT_ID;
   const dataset = process.env.PROJECT_DATASET;
   const url = `https://${projectId}.api.sanity.io/v1/data/query/${dataset}?query=${query}`;
   const resp = await fetch(url).then((res) => res.json());
-  console.log("server response:",resp)
+  const query2 = encodeURIComponent(`*[_type=="skills"]`)
+  //  const query = encodeURIComponent(`*`)
+
+  const url2 = `https://${projectId}.api.sanity.io/v1/data/query/${dataset}?query=${query2}`;
+  const resp2 = await fetch(url2).then((res) => res.json());
+ 
   return {
     props:{
       projects:resp.result,
+      skills:resp2.result,
       projectId,
       dataset
     }

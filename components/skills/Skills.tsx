@@ -2,10 +2,16 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Skill from './Skill'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
-type Props = {}
+type Props = {
+  skills:object[]
+}
 
-function Skills({}: Props) {
+function Skills(props: Props) {
+  
+
   return (
  <div className="container py-16 md:py-20"id="services">
     <h2
@@ -17,7 +23,11 @@ function Skills({}: Props) {
 
     <div
          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10 md:pt-12">
-        <Skill name={"UI design"} description={"Designing user interfaces using modern tools"} icon={"image"}/>
+           {props.skills&&props.skills.map((skill,i)=>
+           <div key={i}>
+        <Skill skill={skill} />
+           </div>
+            )}
     </div>
 </div>
   )
