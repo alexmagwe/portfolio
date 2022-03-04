@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import SocialLinks from "./Socials/SocialLinks";
-import BlockContent from '@sanity/block-content-to-react';
 import { DataContext } from "../context";
+import {PortableText} from '@portabletext/react'
 import { BsArrowRight } from "react-icons/bs";
 
 type Props = {};
@@ -21,7 +21,7 @@ function AboutMe({}: Props) {
             {currentUser.bio?currentUser.bio:"I'm Alex Magwe, a Full stack Developer, Embedded System engineer & Entreprenuer"}
             </h4>
             <p className="font-body pt-6 leading-relaxed">
-             <BlockContent blocks={currentUser.about}/>
+             <PortableText value={currentUser.about}/>
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start pt-6">
               <div className="flex justify-center sm:justify-start items-center">

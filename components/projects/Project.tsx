@@ -5,8 +5,8 @@ import Links, { LinksType } from './Links'
 import imageUrlBuilder from "@sanity/image-url";
 import { useContext } from 'react';
 import { EnvContext } from '../../context';
-import BlockContent from "@sanity/block-content-to-react";
 import TechStack from '../tech/TechStack';
+import {PortableText} from '@portabletext/react'
 import { useImageBuilder } from '../../hooks';
 
 type Props={
@@ -14,7 +14,7 @@ type Props={
 }
 export type ProjectType = {
     title:string
-    description:string
+    description:any[]
     technology:any[]
     mainImage:object
     webLink:string
@@ -36,7 +36,7 @@ function Project({project}: Props) {
         
         </a>
         <span className='text-2xl font-body my-2 py-2'>
-        <BlockContent blocks={project.description}/>
+        <PortableText value={project.description}/>
           </span>
         <TechStack technology={project.technology} />
         <Links githubLink={project.githubLink} webLink={project.webLink}/>

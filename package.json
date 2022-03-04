@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^1.0.3",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^1.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
