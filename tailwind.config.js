@@ -6,7 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
  
-   darkMode: media,
+   media: false,
     theme: {
         fontFamily: {
             header: ['Raleway', "sans-serif"],
