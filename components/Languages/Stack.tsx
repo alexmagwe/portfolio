@@ -38,7 +38,7 @@ function Stack({}: Props) {
       ) : (
         <div>
           <h2 className="font-header font-semibold  text-primary text-4xl mt-4 mb-8 sm:text-5xl lg:text-6xl uppercase text-center">
-            Here's what I'm good at
+            Here&apos;s what I&apos;m good at
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-evenly w-full">
             <WebSkills data={frontEnd} title={"Frontend"} />
