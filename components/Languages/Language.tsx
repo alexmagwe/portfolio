@@ -1,27 +1,26 @@
 import React from "react";
+import {BsPatchCheckFill} from 'react-icons/bs'
 type Props = {
   name: string;
-  percentage: number;
+  skillLevel: number;
 };
 
 function Language(props: Props) {
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-end">
-        <h4 className="font-body font-semibold text-black uppercase">
+      <div className="flex gap-2 ">
+        <span className="w-12 text-sky mt-2">
+    <BsPatchCheckFill/>
+        </span>
+        <p className="flex flex-col justify-start gap-2">
+        <span className="font-body font-semibold  uppercase text-xl lg:text-2xl">
           {props.name}
-        </h4>
-        <h3 className="font-body font-bold text-primary text-3xl">
-          {props.percentage}%
-        </h3>
+        </span>
+        <span className="font-body text-grey-6 0  lg:text-xl text-lg">
+          {props.skillLevel}
+        </span>
+        </p>
       </div>
-      <div className="h-3 w-full rounded-full bg-lila mt-2">
-        <div
-          className="h-3 rounded-full bg-primary"
-          style={{ width: `${props.percentage}%` }}
-        ></div>
-      </div>
-    </div>
+    
   );
 }
 
