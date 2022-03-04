@@ -4,12 +4,14 @@ import React from 'react'
 import Skill from './Skill'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { DataContext } from '../../context';
 
 type Props = {
-  skills:object[]
 }
 
 function Skills(props: Props) {
+  const {skills}=useContext(DataContext)
   
 
   return (
@@ -23,7 +25,7 @@ function Skills(props: Props) {
 
     <div
          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10 md:pt-12">
-           {props.skills&&props.skills.map((skill,i)=>
+           {skills&&skills.map((skill,i)=>
            <div key={i}>
         <Skill skill={skill} />
            </div>

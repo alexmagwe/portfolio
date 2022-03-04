@@ -7,15 +7,15 @@ export type LinksType={
 
 function Links(props: LinksType) {
   return (
-      <div className="flex gap-4 w-full relative text-white  bg-secondary justify-evenly items-center">
-        {props.webLink && (
-          <a  href={props.webLink} target={"_blank"} className="p-4 w-1/2 hover:bg-primary transition flex justify-center" rel="noreferrer">
-              <FaExternalLinkAlt />
+      <div className="flex gap-4 w-4/5 my-4 relative text-white items-center">
+        {props.githubLink && (
+          <a target={"_blank"} className={'p-2 text-lg flex hover:bg-primar border-2 border-zinc-400  rounded-md transition justify-center'} href={props.githubLink} rel="noreferrer">
+              Github
           </a>
         )}
-        {props.githubLink && (
-          <a target={"_blank"} className={'p-4  w-1/2 flex hover:bg-primary transition justify-center'} href={props.githubLink} rel="noreferrer">
-              <FaGithub />
+        {props.webLink && (
+          <a  href={props.webLink} target={"_blank"} className="p-2  text-lg hover:bg-primary  bg-secondary border-2 rounded-md border-zinc-400 transition flex justify-center" rel="noreferrer">
+             Live Demo
           </a>
         )}
       </div>

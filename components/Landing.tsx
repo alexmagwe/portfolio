@@ -7,7 +7,7 @@ type Props = {};
 function Landing({}: Props) {
   return (
     <div>
-      <div className="z-30 relative w-full">
+      <div className="z-30 relative w-full h-screen">
         <Introduction />
       </div>
     </div>
