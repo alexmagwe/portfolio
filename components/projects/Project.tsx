@@ -27,7 +27,7 @@ function Project({project}: Props) {
   
 
   return (
-    <div className='flex flex-col w-full p-6 text-white overflow-hidden shadow-md  bg-primary rounded-2xl relative justify-start'>
+    <div id="projects" className='flex flex-col w-full p-6 text-white overflow-hidden shadow-md  bg-primary rounded-2xl relative justify-start'>
          <a href={project.webLink?project.webLink:project.githubLink}
            className="mx-auto md:mx-0 " target={"_blank"} rel={"noreferrer"}>
             <img src={image}

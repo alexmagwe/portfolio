@@ -13,15 +13,15 @@ function NavBar({}: Props) {
         </li>
 
         <li className="py-2">
-          <span className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
+          <a href="https://keplogs.vercel.app/" target={"_blank"} rel={"noreferrer"} className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
             Blog
-          </span>
+          </a>
         </li>
 
         <li className="py-2">
-          <span className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
+          <a href="#projects" className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
             Projects
-          </span>
+          </a>
         </li>
       </ul>
     </div>

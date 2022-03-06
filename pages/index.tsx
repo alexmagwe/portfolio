@@ -24,8 +24,8 @@ const Home = (props: any) => {
       >
         <div className=" bg-[url('../assets/img/bg-hero.jpg')] h-screen bg-cover">
           <Head>
-            <title>alex magwe Next App</title>
-            <meta name="description" content="alex magwe" />
+            <title>alex magwe</title>
+            <meta name="description" content="alex magwe portfolio" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
