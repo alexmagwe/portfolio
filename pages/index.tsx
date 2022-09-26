@@ -22,33 +22,33 @@ const Home = (props: any) => {
       <EnvContext.Provider
         value={{ projectId: props.projectId, dataset: props.dataset }}
       >
-        <div className=" bg-[url('../assets/img/bg-hero.jpg')] h-screen bg-cover">
           <Head>
             <title>alex magwe</title>
             <meta name="description" content="alex magwe portfolio" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
-          <main className=" text-secondary  ">
+          <main className=" text-secondary bg-secondary dark:text-white ">
             <div className="relative w-full ">
               <div className="h-screen absolute inset-0 z-20"></div>
-              <div className="relative z-50 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to h-screen">
+              <div className="relative bg-[url('../assets/img/custombg.png')] bg-cover bg-no-repeat z-50">
+                <div className="bg-black/20">
                 <NavBar />
                 <Landing />
+                </div>
               </div>
             </div>
             <div>
-              <AboutMe />
+              {/* <AboutMe /> */}
               {/* <Skills /> */}
               <Stack />
               <Projects />
             </div>
           </main>
 
-          <footer className={styles.footer}>
+          <footer className='flex justify-center p-2 bg-secondary'>
            <SocialLinks/>
           </footer>
-        </div>
       </EnvContext.Provider>
     </DataContext.Provider>
   );

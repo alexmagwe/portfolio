@@ -4,8 +4,8 @@ type Props = {};
 
 function NavBar({}: Props) {
   return (
-    <div className='flex relative items-center p-2 justify-center'>
-      <ul className="flex mt-8 gap-4">
+    <div className='flex relative justify-center bg-transparent items-center p-2 py-6 '>
+      <ul className="flex gap-4">
         <li className="py-2">
           <span className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
             Resume

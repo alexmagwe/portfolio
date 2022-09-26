@@ -20,7 +20,7 @@ function SocialLink(props: Props) {
         target={"_blank"}
         rel={"noreferrer"}
       >
-          <img className='h-12 w-12 hover:scale-105' src={image?image:""} alt={props.name}></img>
+          <img className='w-[40px] hover:scale-105' src={image?image:""} alt={props.name}></img>
       </a>
     </div>
   )

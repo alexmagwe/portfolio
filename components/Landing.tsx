@@ -1,16 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Introduction from "./Introduction";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 function Landing({}: Props) {
   return (
-    <div>
+    <motion.div>
       <div className="z-30 relative w-full h-screen">
-        <Introduction />
+        <div className="h-full">
+          <Introduction />
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
