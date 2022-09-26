@@ -27,7 +27,7 @@ function Introduction({}: Props) {
         variants={variants}
         className="font-header text-white text-5xl 2xl:text-6xl sm:text-left"
       >
-        Software developer and Designer
+        Software Developer and Designer
       </motion.h1>
       {/* <p className="font-body text-white text-lg uppercase">
               Let&apos;s connect
