@@ -20,7 +20,7 @@ function Introduction({}: Props) {
   const currentUser = user && user[0];
   const image = useImageBuilder(projectId, dataset, currentUser.profilePicture);
   return (
-    <div className="flex flex-col px-8 justify-start md:ml-64 2xl:ml-84 pt-36 gap-6 xl:w-1/3 md:w-1/2">
+    <div className="flex text-white flex-col px-8 justify-start md:ml-64 2xl:ml-84 pt-36 gap-6 xl:w-1/3 md:w-1/2">
       <motion.h1
         initial="hidden"
         animate="visible"
