@@ -9,7 +9,7 @@ function Landing({}: Props) {
     <motion.div>
       <div className='z-30 relative w-full h-screen'>
         <div className='h-full grid xl:grid-cols-3'>
-          <div className='xl:col-start-2'>
+          <div className='md:col-start-2'>
             <Introduction />
           </div>
         </div>
