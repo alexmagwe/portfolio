@@ -3,7 +3,6 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {markdownSchema} from 'sanity-plugin-markdown'
 import { visionTool } from '@sanity/vision'
-import { env } from './lib/env'
 
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!

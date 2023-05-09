@@ -1,4 +1,6 @@
 import { env } from './env'
+import 'server-only'
+
 export interface PostType {
     body: string
     mainImage: {

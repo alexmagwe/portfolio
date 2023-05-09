@@ -8,9 +8,14 @@ function NavBar({}: Props) {
         <div className="flex sticky top-0 z-50 backdrop-blur-xl bg-secondary/50 justify-center items-center p-2 py-4 ">
             <ul className="flex gap-4">
                 <li className="py-2">
-                    <span className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">
+                    <a
+                        href="https://drive.google.com/file/d/1AMLwmBCv9Y9AU5nQbC0vmyi7EKBaXwWR/view?usp=sharing"
+                        target={'_blank'}
+                        className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer"
+                        rel="noreferrer"
+                    >
                         Resume
-                    </span>
+                    </a>
                 </li>
 
                 <li className="py-2">
