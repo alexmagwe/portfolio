@@ -1,50 +1,51 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import React, { useEffect, useState } from 'react'
-import Links, { LinksType } from './Links'
-import imageUrlBuilder from "@sanity/image-url";
-import { useContext } from 'react';
-import { EnvContext } from '../../context';
-import TechStack from '../tech/TechStack';
-import {PortableText} from '@portabletext/react'
-import { useImageBuilder } from '../../hooks';
-
-type Props={
-  project:ProjectType
-}
-export type ProjectType = {
-    title:string
-    description:any[]
-    technology:any[]
-    mainImage:object
-    webLink:string
-    githubLink:string
+import React from 'react'
+import Links from './Links'
+import TechStack from '../tech/TechStack'
+import { PortableText } from '@portabletext/react'
+import { urlFor } from '@/lib/sanity'
+import { Project } from '@/lib/getProjects'
+import ProjectDescription from './ProjectDescription'
+import Image from 'next/image'
+type Props = {
+    project: Project
 }
 
-function Project({project}: Props) {
-  const{projectId,dataset}=useContext(EnvContext)
-  const image=useImageBuilder(projectId,dataset,project.mainImage)
-  
+function Project({ project }: Props) {
+    const image = urlFor(project.mainImage).url() as string
 
-  return (
-    <div id="projects" className='flex flex-col w-full p-6 text-white overflow-hidden shadow-md  bg-black/50 rounded-2xl relative justify-start'>
-         <a href={project.webLink?project.webLink:project.githubLink}
-           className="mx-auto md:mx-0 " target={"_blank"} rel={"noreferrer"}>
-            <img src={image}
-                 className="shadow w-full z-1 top-0 transition-all duration-300 transform  rounded-3xl  right-0"
-                 alt=""/>
-        
-        </a>
-        <span className='text-2xl font-body my-2 py-2'>
-        <PortableText value={project.description}/>
-          </span>
-        <TechStack technology={project.technology} />
-        <Links githubLink={project.githubLink} webLink={project.webLink}/>
-        {/* <p className='text-white text-lg p-8'>
+    return (
+        <div
+            id="projects"
+            className="flex animate-in fade-in-25 duration-600 flex-col gap-2 w-full  group text-slate-200 overflow-hidden shadow-md  bg-black/50 rounded-2xl relative justify-start"
+        >
+            <div className="">
+                <Image
+                    width={600}
+                    height={600}
+                    src={image}
+                    className=" h-full aspect-auto object-cover z-1 transition-all duration-300 "
+                    alt=""
+                />
+            </div>
+            <div className="w-full h-full top-0 left-0 bg-gradient-to-b from-transparent to-black/80 absolute z-20"></div>
+            <div className="flex w-full py-3 px-6  abslute bottom-0  flex-col z-30 text-center gap-2">
+                <div className=" duration-300 text-lg font-body text-left ">
+                    <ProjectDescription description={project.description} />
+                </div>
+                <TechStack technology={project.technology} />
+                <Links
+                    githubLink={project.githubLink}
+                    webLink={project.webLink}
+                />
+            </div>
+
+            {/* <p className='text-white text-lg p-8'>
           
         </p> */}
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Project

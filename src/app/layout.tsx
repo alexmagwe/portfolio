@@ -8,7 +8,7 @@ type Props = {
 function layout({ children }: Props) {
     return (
         <html lang="en">
-            <body className="text-secondary bg-secondary dark:text-white">
+            <body className="text-secondary bg-secondary dark:text-white/80">
                 <NavBar />
                 {children}
             </body>

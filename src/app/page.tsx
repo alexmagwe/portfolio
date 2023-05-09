@@ -19,8 +19,9 @@ function page({}: Props) {
                 {/* @ts-expect-error Async Server Component */}
 
                 <Skills />
-                {/* <Stack />
-                <Projects /> */}
+                {/* <Stack /> */}
+                {/* @ts-expect-error Async Server Component */}
+                <Projects />
             </div>
         </main>
     )

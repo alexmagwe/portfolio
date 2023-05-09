@@ -2,8 +2,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-
-    media: false,
     theme: {
         fontFamily: {
             header: ['Raleway', 'sans-serif'],
@@ -13,28 +11,6 @@ module.exports = {
         screens: {
             xs: '375px',
             ...defaultTheme.screens,
-        },
-
-        colors: {
-            transparent: 'transparent',
-            primary: '#6242f1',
-            secondary: '#003260',
-            white: '#ffffff',
-            black: '#000000',
-            yellow: '#f9e71c',
-            lila: '#e6e5ec',
-            royal: '#084594',
-            'grey-10': '#6c6b6d',
-            'grey-20': '#7c7c7c',
-            'grey-30': '#919091',
-            'grey-40': '#929293',
-            'grey-50': '#f4f3f8',
-            'grey-60': '#edebf6',
-            'grey-70': '#d8d8d8',
-            'hero-gradient-from': 'rgba(85, 64, 174, 0.8)',
-            'hero-gradient-to': 'rgba(65, 47, 144, 0.8)',
-            'blog-gradient-from': '#8f9098',
-            'blog-gradient-to': '#222222',
         },
 
         container: {
@@ -48,6 +24,27 @@ module.exports = {
         },
 
         extend: {
+            colors: {
+                transparent: 'transparent',
+                primary: '#6242f1',
+                secondary: '#003260',
+                white: '#ffffff',
+                black: '#000000',
+                yellow: '#f9e71c',
+                lila: '#e6e5ec',
+                royal: '#084594',
+                'grey-10': '#6c6b6d',
+                'grey-20': '#7c7c7c',
+                'grey-30': '#919091',
+                'grey-40': '#929293',
+                'grey-50': '#f4f3f8',
+                'grey-60': '#edebf6',
+                'grey-70': '#d8d8d8',
+                'hero-gradient-from': 'rgba(85, 64, 174, 0.8)',
+                'hero-gradient-to': 'rgba(65, 47, 144, 0.8)',
+                'blog-gradient-from': '#8f9098',
+                'blog-gradient-to': '#222222',
+            },
             spacing: {
                 13: '3.25rem',
                 15: '3.75rem',
@@ -94,6 +91,22 @@ module.exports = {
             inset: {
                 '2/5': '40%',
             },
+            animation: {
+                slider: 'slide 20s linear infinite ',
+                'slider-reverse': 'slide 20s linear reverse infinite',
+            },
+            keyframes: {
+                slide: {
+                    '0%, ': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                    // '100%': { transform: 'translateX(-200%)' },
+                },
+                slideReverse: {
+                    '0%, ': { transform: 'translateX(50%)' },
+                    '100%': { transform: 'translateX(100%)' },
+                    // '100%': { transform: 'translateX(-200%)' },
+                },
+            },
         },
     },
     variants: {
@@ -104,6 +117,7 @@ module.exports = {
     plugins: [
         require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
+        require('tailwindcss-animate'),
         require('@tailwindcss/aspect-ratio'),
     ],
 }
