@@ -3,7 +3,6 @@
 import React from 'react'
 import Links from './Links'
 import TechStack from '../tech/TechStack'
-import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/lib/sanity.client'
 import { Project } from '@/lib/getProjects'
 import ProjectDescription from './ProjectDescription'

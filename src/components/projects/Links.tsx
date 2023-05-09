@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 export type LinksType = {
     webLink: string | null
     githubLink: string

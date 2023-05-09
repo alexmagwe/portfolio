@@ -37,8 +37,8 @@ export default function ProjectHeader({}: Props) {
                 variants={variant2}
                 className="font-header  mx-auto w-1/2  text-md pt-6 text-center"
             >
-                I've worked on alot of projects over the years but these ones
-                are the ones that im most proud of, Many of them are
+                I&apos;ve worked on alot of projects over the years but these
+                ones are the ones that im most proud of, Many of them are
                 open-source, so if you see something that piques your interest,
                 check out the code and contribute if you have ideas for how it
                 can be improved.

@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Skill from './Skill'
-import { env } from '@/lib/env'
 import { getSkills } from '@/lib/getSkills'
 
 type Props = {}
