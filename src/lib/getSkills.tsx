@@ -26,7 +26,7 @@ export async function getSkills(): Promise<Skill[]> {
     const stackQuery = encodeURIComponent(
         `*[_type=="stack"]{...,category->{title}}`
     )
-    const stackUrl = `https://${env.PROJECT_ID}.api.sanity.io/v1/data/query/${env.PROJECT_DATASET}?query=${stackQuery}`
+    const stackUrl = `https://${env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v1/data/query/${env.NEXT_PUBLIC_SANITY_PROJECT_DATASET}?query=${stackQuery}`
     const skills = await fetch(stackUrl).then((res) => res.json())
     return skills.result
 }

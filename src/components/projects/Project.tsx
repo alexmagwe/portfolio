@@ -4,7 +4,7 @@ import React from 'react'
 import Links from './Links'
 import TechStack from '../tech/TechStack'
 import { PortableText } from '@portabletext/react'
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/sanity.client'
 import { Project } from '@/lib/getProjects'
 import ProjectDescription from './ProjectDescription'
 import Image from 'next/image'
@@ -16,10 +16,7 @@ function Project({ project }: Props) {
     const image = urlFor(project.mainImage).url() as string
 
     return (
-        <div
-            id="projects"
-            className="flex animate-in fade-in-25 duration-600 flex-col gap-2 w-full  group text-slate-200 overflow-hidden shadow-md  bg-black/50 rounded-2xl relative justify-start"
-        >
+        <div className="flex animate-in fade-in-25 duration-600 flex-col gap-2 w-full  group text-slate-200 overflow-hidden shadow-md  bg-black/50 rounded-2xl relative justify-start">
             <div className="">
                 <Image
                     width={600}

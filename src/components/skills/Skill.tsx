@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Image from 'next/image'
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/sanity.client'
 import { Skill } from '@/lib/getSkills'
 type Props = {
     skill: Skill

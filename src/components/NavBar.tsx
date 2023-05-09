@@ -5,7 +5,7 @@ type Props = {}
 
 function NavBar({}: Props) {
     return (
-        <div className="flex sticky top-0 z-50 bg-blur- justify-center items-center p-2 py-6 ">
+        <div className="flex sticky top-0 z-50 backdrop-blur-xl bg-secondary/50 justify-center items-center p-2 py-4 ">
             <ul className="flex gap-4">
                 <li className="py-2">
                     <span className="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">

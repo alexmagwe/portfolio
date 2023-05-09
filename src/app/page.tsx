@@ -1,5 +1,3 @@
-import Stack from '@/components/Languages/Stack'
-import NavBar from '@/components/NavBar'
 import Landing from '@/components/hero/Landing'
 import Projects from '@/components/projects/Projects'
 import Skills from '@/components/skills/Skills'

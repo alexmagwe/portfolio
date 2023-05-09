@@ -9,7 +9,7 @@ async function Projects(props: Props) {
     const projects = await getProjects()
 
     return (
-        <div className="container py-16 md:py-20" id="portfolio">
+        <div id="projects" className="container py-16 md:py-20">
             <ProjectHeader />
             <div className="w-full sm:w-3/4 lg:w-full mx-auto  md:columns-2 lg:columns-3 gap-8 md:gap-10 pt-16">
                 {projects &&

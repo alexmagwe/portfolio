@@ -1,8 +1,9 @@
 import {z} from "zod"
-
+import 'server-only'
 const schema=z.object({
-    PROJECT_ID:z.string(),
-    PROJECT_DATASET:z.string(),
+    NEXT_PUBLIC_SANITY_PROJECT_ID:z.string(),
+    NEXT_PUBLIC_SANITY_PROJECT_DATASET:z.string(),
+    NEXT_PUBLIC_SANITY_API_VERSION:z.string(),
 
 })
 const parsed=schema.safeParse(process.env)
