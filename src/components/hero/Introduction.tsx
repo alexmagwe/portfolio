@@ -4,7 +4,7 @@ import { getUser } from '@/lib/getUser'
 import { Title } from './Title'
 import { Bio } from './Bio'
 import SocialLinks from '../Socials/SocialLinks'
-
+import HelloAnimation from './HelloAnimation'
 type Props = {}
 export const revalidate = 0
 async function Introduction({}: Props) {
@@ -22,6 +22,7 @@ async function Introduction({}: Props) {
     return (
         <div className="flex p-8 backdrop-blur-lg text-white flex-col px-8 justify-start pt-8 gap-6">
             {<Title />}
+
             {/* <p className="font-body text-white text-lg uppercase">
               Let&apos;s connect
             </p> */}
@@ -32,6 +33,7 @@ async function Introduction({}: Props) {
                     {/* @ts-expect-error Async Server Component */}
                     <SocialLinks />
                 </div>
+                <HelloAnimation />
             </div>
         </div>
     )

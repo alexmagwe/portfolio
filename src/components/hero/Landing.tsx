@@ -6,8 +6,8 @@ type Props = {}
 
 function Landing({}: Props) {
     return (
-        <div className="sticky flex-1 top-0 min-h-screen bg-teal-900">
-            <div className="z-10 relative w-full h-screen">
+        <div className="sticky flex-1 top-0 lg:min-h-screen bg-teal-950">
+            <div className="z-30 relative w-full lg:h-screen">
                 <div className="h-full ">
                     <div className="p-4">
                         {/* @ts-expect-error Async Server Component */}

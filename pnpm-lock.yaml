@@ -20,6 +20,7 @@ specifiers:
   eslint: 8.24.0
   eslint-config-next: 13.4.0
   framer-motion: ^10.12.8
+  lottie-react: ^2.4.0
   next: 13.5.4
   next-sanity: ^4.3.2
   postcss: ^8.4.16
@@ -52,6 +53,7 @@ dependencies:
   '@types/styled-components': 5.1.0
   easymde: 2.18.0
   framer-motion: 10.12.8_biqbaboplfbrettd7655fr4n2y
+  lottie-react: 2.4.0_biqbaboplfbrettd7655fr4n2y
   next: 13.5.4_biqbaboplfbrettd7655fr4n2y
   next-sanity: 4.3.2_4x6jbyh3uon4erkjiwpwdajpi4
   react: 18.2.0
@@ -4842,6 +4844,21 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+
+  /lottie-react/2.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-pDJGj+AQlnlyHvOHFK7vLdsDcvbuqvwPZdMlJ360wrzGFurXeKPr8SiRCjLf3LrNYKANQtSsh5dz9UYQHuqx4w==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lottie-web: 5.12.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /lottie-web/5.12.2:
+    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
+    dev: false
 
   /lru-cache/5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}

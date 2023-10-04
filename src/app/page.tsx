@@ -8,7 +8,7 @@ type Props = {}
 function page({}: Props) {
     return (
         <main className="relative">
-            <div className="top-0 flex flex-wrap gap-4">
+            <div className="top-0 grid lg:grid-cols-2 gap-4">
                 <Landing />
                 {/* <div className="h-screen absolute inset-0 z-20"></div> */}
                 {/* @ts-expect-error Async Server Component */}
