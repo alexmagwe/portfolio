@@ -5,7 +5,7 @@ import helloAnimation from '@/lottie/helloAnimation.json'
 
 const HelloAnimation = () => {
     return (
-        <div className="">
+        <div className="max-h-[650px] overflow-clip">
             <Lottie animationData={helloAnimation} loop={true} />
         </div>
     )
