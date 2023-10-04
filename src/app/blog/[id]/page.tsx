@@ -11,7 +11,6 @@ type Props = {
 
 async function page({ params }: Props) {
     const post = await getPost(params.id)
-    console.log(post)
     const imageUrl = urlFor(post.mainImage).url() as string
 
     return (

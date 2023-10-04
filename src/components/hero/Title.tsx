@@ -12,9 +12,9 @@ export function Title({}) {
             initial="hidden"
             animate="visible"
             variants={variants}
-            className="font-header text-yellow/80 text-5xl 2xl:text-6xl text-center"
+            className="font-header text-yellow/80 text-5xl "
         >
-            Software Developer and Designer
+            Alex Magwe
         </motion.h1>
     )
 }

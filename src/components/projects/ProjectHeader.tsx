@@ -14,24 +14,24 @@ export default function ProjectHeader({}: Props) {
         }
     }, [controls, inView])
     const variant1 = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 10 },
         visible: { opacity: 1, y: 0, transition: { duration: 2 } },
     }
     const variant2 = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 10 },
         visible: { opacity: 1, y: 0, transition: { duration: 3 } },
     }
     return (
-        <div ref={ref}>
+        <div className="mb-4" ref={ref}>
             <motion.h2
                 initial="hidden"
                 animate="visible"
                 variants={variant1}
-                className="font-header font-semibold  text-2xl sm:text-4xl text-center"
+                className="font-header font-semibold  text-2xl sm:text-4xl"
             >
                 Some of my Projects
             </motion.h2>
-            <motion.h3
+            {/* <motion.h3
                 initial="hidden"
                 animate={controls}
                 variants={variant2}
@@ -42,7 +42,7 @@ export default function ProjectHeader({}: Props) {
                 open-source, so if you see something that piques your interest,
                 check out the code and contribute if you have ideas for how it
                 can be improved.
-            </motion.h3>
+            </motion.h3> */}
         </div>
     )
 }

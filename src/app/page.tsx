@@ -7,19 +7,18 @@ type Props = {}
 
 function page({}: Props) {
     return (
-        <main className="  ">
-            <div className="relative w-full ">
-                {/* <div className="h-screen absolute inset-0 z-20"></div> */}
+        <main className="relative">
+            <div className="top-0 flex flex-wrap gap-4">
                 <Landing />
+                {/* <div className="h-screen absolute inset-0 z-20"></div> */}
+                {/* @ts-expect-error Async Server Component */}
+                <Projects />
             </div>
             <div>
                 {/* <AboutMe /> */}
-                {/* @ts-expect-error Async Server Component */}
 
-                <Skills />
+                {/* <Skills /> */}
                 {/* <Stack /> */}
-                {/* @ts-expect-error Async Server Component */}
-                <Projects />
             </div>
         </main>
     )

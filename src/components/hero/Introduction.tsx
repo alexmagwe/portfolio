@@ -6,7 +6,7 @@ import { Bio } from './Bio'
 import SocialLinks from '../Socials/SocialLinks'
 
 type Props = {}
-
+export const revalidate = 0
 async function Introduction({}: Props) {
     const user = await getUser()
     const variants = {
@@ -20,7 +20,7 @@ async function Introduction({}: Props) {
     //     currentUser.profilePicture
     // )
     return (
-        <div className="flex  p-8 text-center backdrop-blur-lg text-white flex-col px-8 justify-start pt-36 gap-6">
+        <div className="flex p-8 backdrop-blur-lg text-white flex-col px-8 justify-start pt-8 gap-6">
             {<Title />}
             {/* <p className="font-body text-white text-lg uppercase">
               Let&apos;s connect
@@ -28,7 +28,7 @@ async function Introduction({}: Props) {
             {<Bio user={user} />}
             <div className="">
                 <i className="bx bx-chevron-right text-yellow text-3xl"></i>
-                <div className="flex items-center text-white gap-4 justify-center pt-5 sm:pt-0 pl-2">
+                <div className="flex items-center text-white gap-4  pt-5 sm:pt-0 pl-2">
                     {/* @ts-expect-error Async Server Component */}
                     <SocialLinks />
                 </div>

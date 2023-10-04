@@ -34,7 +34,12 @@ function SocialLink(props: Props) {
 
     return (
         <motion.div initial="hidden" animate="visible" variants={variants}>
-            <a href={props.link} target={'_blank'} rel={'noreferrer'}>
+            <a
+                className="hover:scale-105 hover:text-yellow block"
+                href={props.link}
+                target={'_blank'}
+                rel={'noreferrer'}
+            >
                 {icon}
             </a>
         </motion.div>

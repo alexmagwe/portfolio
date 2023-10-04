@@ -19,7 +19,7 @@ export function Bio({ user }: Props) {
         >
             <h4
                 className="font-header 
-            font-medium text-xl  2xl:text-2xl "
+            font-medium text-2xl  2xl:text-3xl "
             >
                 {user.bio
                     ? user.bio

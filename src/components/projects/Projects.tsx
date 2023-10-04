@@ -9,14 +9,15 @@ async function Projects(props: Props) {
     const projects = await getProjects()
 
     return (
-        <div id="projects" className="container py-16 md:py-20">
+        <div
+            id="projects"
+            className="max-h-screen flex-1 overflow-auto py-12 container "
+        >
             <ProjectHeader />
-            <div className="w-full sm:w-3/4 lg:w-full mx-auto  md:columns-2 lg:columns-3 gap-8 md:gap-10 pt-16">
+            <div className="flex flex-col items-start justify-center gap-6">
                 {projects &&
                     projects.map((project, i) => (
-                        <div className="my-4" key={i}>
-                            {<Project project={project} />}
-                        </div>
+                        <Project key={i} project={project} />
                     ))}
             </div>
         </div>
