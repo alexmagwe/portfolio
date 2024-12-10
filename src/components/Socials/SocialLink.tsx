@@ -2,6 +2,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { env } from '@/lib/env'
 import Image from 'next/image'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
@@ -28,6 +29,8 @@ function SocialLink(props: Props) {
         case 'Linkedin':
             icon = <BsLinkedin size={25} />
             break
+        case 'CV':
+            icon=<IoDocumentTextOutline size={25}/>
         default:
             break
     }
@@ -35,12 +38,13 @@ function SocialLink(props: Props) {
     return (
         <motion.div initial="hidden" animate="visible" variants={variants}>
             <a
-                className="hover:scale-105 hover:text-yellow block"
+                className="hover:scale-105 space-x-2 hover:text-yellow block"
                 href={props.link}
                 target={'_blank'}
                 rel={'noreferrer'}
             >
                 {icon}
+                {props.name=='CV'&&'CV'}
             </a>
         </motion.div>
     )
