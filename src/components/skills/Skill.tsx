@@ -2,9 +2,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.client'
-import { Skill } from '@/lib/getSkills'
+import { Skill as SkillType } from '@/lib/getSkills'
 type Props = {
-    skill: Skill
+    skill: SkillType
 }
 
 function Skill({ skill }: Props) {
