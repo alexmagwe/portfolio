@@ -5,14 +5,16 @@ import React from 'react'
 
 type Props = {}
 
-function page({}: Props) {
+function page({ }: Props) {
     return (
         <main className="relative">
-            <div className="top-0 grid lg:grid-cols-2 gap-4">
+            <div className=" grid lg:grid-cols-2 gap-4">
                 <Landing />
                 {/* <div className="h-screen absolute inset-0 z-20"></div> */}
-                {/* @ts-expect-error Async Server Component */}
-                <Projects />
+                <div className='sticky top-0'>
+                    {/* @ts-expect-error Async Server Component */}
+                    <Projects />
+                </div>
             </div>
             <div>
                 {/* <AboutMe /> */}

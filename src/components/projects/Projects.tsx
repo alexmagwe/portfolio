@@ -11,7 +11,7 @@ async function Projects(props: Props) {
     return (
         <div
             id="projects"
-            className="max-h-screen flex-1 overflow-auto py-12 container relative bg-slate-900 z-50"
+            className="lg:max-h-screen flex-1 overflow-auto py-12 container relative bg-slate-900 "
         >
             <ProjectHeader />
             <div className="flex flex-col items-start justify-center gap-6">
