@@ -4,11 +4,11 @@ import React from 'react'
 import Links from './Links'
 import TechStack from '../tech/TechStack'
 import { urlFor } from '@/lib/sanity.client'
-import { Project } from '@/lib/getProjects'
+import { Project as ProjectType } from '@/lib/getProjects'
 import ProjectDescription from './ProjectDescription'
 import Image from 'next/image'
 type Props = {
-    project: Project
+    project: ProjectType
 }
 
 function Project({ project }: Props) {

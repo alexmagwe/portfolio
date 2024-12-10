@@ -6,7 +6,7 @@ type Props = {}
 
 function Landing({}: Props) {
     return (
-        <div className="sticky flex-1 top-0 lg:min-h-screen bg-teal-950">
+        <div className="sticky flex-1 top-0 z-10 relative lg:min-h-screen bg-teal-950">
             <div className="z-30 relative w-full lg:h-screen">
                 <div className="h-full ">
                     <div className="p-4">
