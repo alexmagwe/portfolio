@@ -30,7 +30,7 @@ function SocialLink(props: Props) {
             icon = <BsLinkedin size={25} />
             break
         case 'CV':
-            icon=<IoDocumentTextOutline size={25}/>
+            icon = <IoDocumentTextOutline size={25} />
         default:
             break
     }
@@ -38,13 +38,13 @@ function SocialLink(props: Props) {
     return (
         <motion.div initial="hidden" animate="visible" variants={variants}>
             <a
-                className="hover:scale-105 space-x-2 hover:text-yellow block"
+                className="hover:scale-105 flex gap-2 items-center justify-start  hover:text-yellow "
                 href={props.link}
                 target={'_blank'}
                 rel={'noreferrer'}
             >
                 {icon}
-                {props.name=='CV'&&'CV'}
+                {props.name == 'CV' && 'CV'}
             </a>
         </motion.div>
     )

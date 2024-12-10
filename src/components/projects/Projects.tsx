@@ -7,11 +7,10 @@ type Props = {}
 
 async function Projects(props: Props) {
     const projects = await getProjects()
-
     return (
         <div
             id="projects"
-            className="lg:max-h-screen flex-1 overflow-auto py-12 container relative bg-slate-900 "
+            className="lg:max-h-screen flex-1 overflow-auto scrollbar-thin scrollbar-thumb-slate-700 py-12 container relative bg-slate-900 "
         >
             <ProjectHeader />
             <div className="flex flex-col items-start justify-center gap-6">

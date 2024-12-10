@@ -4,9 +4,8 @@ import SocialLink from './SocialLink'
 import { getUser } from '@/lib/getUser'
 type Props = {}
 
-async function SocialLinks({}: Props) {
+async function SocialLinks({ }: Props) {
     const { socials } = await getUser()
-
     return (
         <>
             {socials &&
